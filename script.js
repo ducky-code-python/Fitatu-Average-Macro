@@ -33,9 +33,9 @@ function processCSV(text) {
 
   data.forEach(entry => {
     const dataDnia = entry['Data'];
-    const bialka = parseFloat(entry['Białka (g)'] || entry['BiaĹ‚ka (g)'] || 0);
-    const tluszcze = parseFloat(entry['Tłuszcze (g)'] || entry['TĹ‚uszcze (g)'] || 0);
-    const wegle = parseFloat(entry['Węglowodany (g)'] || entry['WÄ™glowodany (g)'] || 0);
+    const bialka = parseFloat(entry['Białka (g)'] || entry['Białka (g)'] || 0);
+    const tluszcze = parseFloat(entry['Tłuszcze (g)'] || entry['Tłuszcze (g)'] || 0);
+    const wegle = parseFloat(entry['Węglowodany (g)'] || entry['Węglowodany (g)'] || 0);
     const kalorie = parseFloat(entry['kalorie (kcal)'] || 0);
 
     if (poprzedniaData && poprzedniaData === dataDnia) {
