@@ -2,18 +2,23 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <title>Makroskładniki CSV</title>
+  <title>Średnie makro</title>
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    pre { background: #f0f0f0; padding: 10px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2><strong>Wczytaj plik z makroskładnikami (CSV)</strong></h2>
-  <input type="file" id="csvFile" accept=".csv" />
-  <pre id="output"></pre>
+   <div class="main">
+   <h2>Wczytaj plik z makroskładnikami (CSV)</h2>
+   <input type="file" id="csvFile" accept=".csv" />
+   
+   </div>
+   <pre id="srednia"></pre>
+   
+   <a id="szczegoly"></a>
 
+   <div class="dni" id="dni">
+    </div>
+    
   <script src="script.js"></script>
 </body>
 </html>
