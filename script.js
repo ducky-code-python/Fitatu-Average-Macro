@@ -2,17 +2,14 @@ const srednia = document.getElementById("srednia");
 function myFunction() {
    document.getElementById("myDropdown").classList.toggle("show");
  }
- let szczegolneDni = []
  function znajdzDzien(dzien) {
-   console.log('test')
    szczegolneDni.forEach((dict) => {
-     console.log(dict.dzien)
       if (dict.dzien == dzien) {
-       document.getElementById("szczegoly").textContent = `DZIEŃ: ${dict.dzien}\n
-                                                           KALORIE: ${dict.kalorie}\n
-                                                           BIAŁKO: ${dict.bialka}\n
-                                                           TŁUSZCZE: ${dict.tluszcze}\n
-                                                           WĘGLOWODANY: ${dict.weglowodany}\n`;
+       document.getElementById("szczegoly").innerHTML = `DZIEŃ: ${dict.dzien}<br>
+                                                           KALORIE: ${dict.kalorie}<br>
+                                                           BIAŁKO: ${dict.bialka}<br>
+                                                           TŁUSZCZE: ${dict.tluszcze}<br>
+                                                           WĘGLOWODANY: ${dict.weglowodany}<br>`;
      }
    });
  }
@@ -50,7 +47,7 @@ function myFunction() {
             dni[dataDnia].kalorie += toFloat(entry['kalorie (kcal)']);
           }
 
-          let szczegolneDni = [];
+          szczegolneDni = [];
           let sredniaText = ""
           let sumaKalorii = 0, sumaBialka = 0, sumaTluszczy = 0, sumaWegli = 0;
           let liczbaDni = 0;
@@ -88,7 +85,7 @@ function myFunction() {
           document.getElementById('dni').appendChild(linkElement);
         });
           
-
+        document.getElementById("srednia").classList.toggle("show")
         }
       });
    });
